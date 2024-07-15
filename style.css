@@ -1,0 +1,662 @@
+:root {
+    --primary-color: #A21B1B;
+    --primary-color-dark: #680202;
+    --text-color: #322F2F;
+    --white-color: #FFFFFF;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", sans-serif;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+h1{
+    font-size: 3rem;
+    color: var(--primary-color-dark);
+}
+
+h2{
+    font-size: 2rem;
+    color: var(--primary-color-dark);
+    font-weight: 600;
+}
+
+h3{
+    font-size: 1.5rem;
+}
+
+p{
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.button {
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+    padding-block: 0.5rem;
+    padding-inline: 1.25rem;
+    background-color: var(--primary-color);
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: #ffff;
+    font-weight: 600;
+    border: 3px solid #ffffff4d;
+    outline: none;
+    overflow: hidden;
+    font-size: 15px;
+  }
+  
+  
+  .button:hover {
+    transform: scale(1.05);
+    border-color: #fff9;
+  }
+  
+  .button:hover .icon {
+    transform: translate(4px);
+  }
+  
+  .button:hover::before {
+    animation: shine 1.5s ease-out infinite;
+  }
+  
+  .button::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    background-image: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 30%,
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0) 70%
+    );
+    top: 0;
+    left: -100px;
+    opacity: 0.6;
+  }
+  
+  @keyframes shine {
+    0% {
+      left: -100px;
+    }
+  
+    60% {
+      left: 100%;
+    }
+  
+    to {
+      left: 100%;
+    }
+  }
+  
+
+/* Top section */
+
+.top-section{
+    height: 30px;
+    width: 100%;
+    background-color: var(--primary-color-dark);
+}
+
+/* Top Banner */
+
+.top-banner {
+    background-color: #fff;
+    padding: 10px 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    height: 7rem;
+    margin-right: 10px;
+}
+.academy-name {
+    color: var(--primary-color);
+}
+
+.academy-name h2{
+    font-weight: 800;
+
+}
+
+.academy-name h5{
+    font-weight: 700;
+    font-size: 1.2rem;
+    letter-spacing: 0.5rem;
+}
+.contact-login {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 0.7rem;
+}
+.call-us {
+    margin-right: 15px;
+    text-align: left;
+}
+
+.contact-login .fa-phone{
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+.call-us h3, .call-us p{
+    color: var(--primary-color);
+    font-size: 1rem;
+    font-weight: 600;
+}
+.login-btn {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+}
+
+/* Navbar */
+
+.custom-navbar {
+    background-color: var(--primary-color);
+}
+.navbar-nav .nav-link {
+    color: #fff !important;
+    border-radius: 8px;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover{
+    background-color: var(--primary-color-dark);
+}
+
+/* Hero Section */
+
+.hero-section {
+    position: relative;
+    height: 500px;
+    background-image: url('Images/college.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(23, 7, 7, 0.8), rgba(44, 0, 0, 0.1));
+    backdrop-filter: blur(2px);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+/* Latest News */
+
+.news-container {
+    overflow: hidden;
+    background-color: var(--primary-color-dark);
+    padding: 5px 0;
+}
+.news-label {
+    background-color: #c86803;
+    color: white;
+    padding: 5px 15px;
+    font-weight: bold;
+    z-index: 1;
+}
+.news-items {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: scroll-left 30s linear infinite;
+}
+.news-item {
+    display: inline-block;
+    padding-right: 50px;
+    color: var(--white-color);
+}
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Our Campus Section */
+
+.section-title, .section-title-dark {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: 700;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 5px;
+    width: 4rem;
+    height: 3px;
+    background-color: var(--primary-color-dark);
+}
+
+.section-title-dark::after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -10px;
+    border-radius: 5px;
+    width: 4rem;
+    height: 3px;
+    background-color: var(--white-color);
+}
+.campus-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Statistics Section */
+
+.stats-section {
+    background-image: url('./Images/college.jpg');
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    padding: 90px 0 60px 0px;
+}
+
+.stats-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 100%);
+    backdrop-filter: blur(5px);
+}
+
+.stats-content {
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.stat-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stat-icon {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.stat-item:hover .stat-icon {
+    transform: rotate(360deg);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.stat-info {
+    flex-grow: 1;
+}
+
+.stat-number {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 0.1rem;
+    background: linear-gradient(45deg, #c86803, #feca57);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.stat-text {
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+
+
+/* Campus Infrastructure */
+
+.campus-section {
+    padding: 50px 0;
+}
+
+.campus-section .campus-card {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    margin-bottom: 30px;
+}
+
+.campus-section .campus-card:hover {
+    transform: translateY(-5px);
+}
+
+.campus-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.campus-section .campus-card-title {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px;
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.campus-section .campus-card-body {
+    padding: 15px;
+}
+
+.campus-section .campus-card-text {
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* Featured Coursed */
+
+.featured-courses {
+    background-image: url('/Images/Library_BG.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 100px 0;
+    overflow: hidden;
+}
+
+.featured-courses::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(5px);
+}
+
+.featured-courses-content {
+    position: relative;
+    z-index: 1;
+}
+
+.featured-courses .col-lg-4, .featured-courses .col-md-6{
+    margin-bottom: 30px;
+}
+
+.course-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 30px;
+    text-align: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
+}
+
+.course-card::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-color), transparent);
+    transition: all 0.5s ease;
+    z-index: -1;
+}
+
+.course-card:hover::before {
+    top: 0;
+}
+
+.course-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.course-icon {
+    font-size: 3rem;
+    color: #ffeeee;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover .course-icon {
+    transform: scale(1.2);
+    color: var(--white-color);
+}
+
+.course-title {
+    color: var(--white-color);
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+.course-description {
+    color: var(--white-color);
+    font-size: 0.9rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+}
+
+.course-card:hover .course-description {
+    opacity: 1;
+}
+
+/* Top Recruiters Section */
+
+.top-recruiters {
+    padding: 80px 0;
+    background-color: var(--white-color);
+}
+
+.recruiter-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 120px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.recruiter-logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.recruiter-logo img {
+    max-width: 100%;
+    max-height: 80px;
+    filter: grayscale(100%);
+    transition: all 0.3s ease;
+}
+
+.recruiter-logo:hover img {
+    filter: grayscale(0%);
+}
+
+/* Footer Section */
+
+.footer {
+    background-color: #a29999b2;
+    color: #322F2F;
+    padding: 50px 0 30px;
+}
+.footer h5 {
+    color: #323232;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+.footer ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.footer ul li {
+    margin-bottom: 10px;
+}
+.footer ul li a {
+    color: #322F2F;
+    text-decoration: none;
+    transition: 0.2s ease-in;
+}
+.footer ul li a:hover {
+    color: #1c1919;
+    font-weight: 600;
+}
+.social-icons a {
+    color: #323232;
+    font-size: 24px;
+    margin-right: 15px;
+}
+.subfooter {
+    background-color: #2a2a2a;
+    color: #FFFFFF;
+    padding: 15px 0;
+}
+.college-logo {
+    max-width: 150px;
+    margin-bottom: 20px;
+    mix-blend-mode: multiply;
+    
+}
+
+/* Contact Page/Section */
+
+.contact-section {
+    background-color: #f8f9fa;
+    padding: 80px 0;
+    position: relative;
+}
+.contact-image {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: auto;
+    width: 40%;
+    object-fit: cover;
+
+}
+.vertical-line {
+    width: 2px;
+    background-color: var(--primary-color);
+    height: 80%;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translateX(-50%);
+}
+.form-container {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 40px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+.form-label {
+    font-weight: 600;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+.form-control {
+    border: none;
+    border-bottom: 2px solid #ced4da;
+    border-radius: 0;
+    padding-left: 0;
+    transition: all 0.3s ease-in-out;
+    background-color: transparent;
+}
+.form-control:focus {
+    box-shadow: none;
+    border-color: var(--primary-color);
+    background-color: rgba(162, 27, 27, 0.05);
+}
+.form-title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+}

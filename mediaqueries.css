@@ -1,0 +1,16 @@
+@media screen and (max-width: 760px) {
+    .nav-item{
+        text-align: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .stat-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stat-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
