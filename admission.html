@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Safalta Academy - Contact</title>
+    <title>Safalta Academy - Admission</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -84,48 +84,131 @@
         </div>
     </nav>
 
+    <!-- Hero Section -->
+    <section class="hero-section about-hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>ADMISSION</h1>
+            <h2>SAFALTA ACADEMY</h2>
+        </div>
+    </section>
 
-    <section class="contact-section">
-        <div class="container">
-            <div class="headline d-flex justify-content-center align-items-center">
-                <h2 class="section-title">Contact Us</h2>
+
+    <section class="admission-process">
+        <div class="headline d-flex justify-content-center align-items-center">
+            <h2 class="section-title">Admission Process</h2>
+        </div>
+        <div class="timeline mt-5">
+            <div class="timeline-item left">
+                <div class="content">
+                    <div class="icon"><i class="fas fa-file-alt"></i></div>
+                    <h2>1. Ignite Your Potential</h2>
+                    <p>Begin your transformative journey by completing our insightful admission enquiry form. Let's uncover your unique talents and aspirations together.</p>
+                    <a href="#" class="btn btn-primary">Start Your Quest</a>
+                </div>
             </div>
-            <div class="row mt-5">
-                <div class="col-md-5 contact-image-container order-md-1 order-2">
-                    <img src="Images/contact.png" alt="Contact Us" class="img-fluid contact-image">
+            <div class="timeline-item right">
+                <div class="content">
+                    <div class="icon"><i class="fas fa-user-plus"></i></div>
+                    <h2>2. Craft Your Legacy</h2>
+                    <p>Bring your academic story to life through our dynamic online registration portal. Showcase your achievements and paint a vivid picture of your future.</p>
+                    <a href="#" class="btn btn-primary">Shape Your Profile</a>
                 </div>
-                <div class="col-md-1 order-md-2 d-flex justify-content-center position-relative">
-                    <div class="vertical-line"></div>
-                </div>
-                <div class="col-md-6 order-md-3 order-1">
-                    <div class="form-container">
-                        <h2 class="form-title">Get in Touch</h2>
-                        <p class="mb-4">Fill in the short form and we will get back to you as soon as possible.</p>
-                        <form>
-                            <div class="mb-4">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="subject" class="form-label">Subject</label>
-                                <input type="text" class="form-control" id="subject" required>
-                            </div>
-                            <div class="mb-4">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" rows="4" required></textarea>
-                            </div>
-                            <a href="#"><button type="submit" class="button">Send Message</button></a>
-                        </form>
-                    </div>
+            </div>
+            <div class="timeline-item left">
+                <div class="content">
+                    <div class="icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h2>3. Secure Your Destiny</h2>
+                    <p>Cement your commitment to excellence by finalizing your admission. Choose from our flexible payment options to begin your academic odyssey.</p>
+                    <a href="#" class="btn btn-primary">Claim Your Future</a>
                 </div>
             </div>
         </div>
     </section>
 
+    <section class="admission-form-section">
+        <div class="headline d-flex justify-content-center align-items-center">
+            <h2 class="section-title">Admission Process</h2>
+        </div>
+        <div class="container admission-form-container">
+            <div class="form-header">
+                <p>Please fill out the form below to begin your academic journey</p>
+            </div>
+            <form id="admissionForm">
+                <div class="row">
+                    <div class="col-md-6 form-group">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="col-md-6 form-group">
+                        <label for="lastName" class="form-label">Last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="dob" class="form-label">Date of Birth</label>
+                    <input type="date" class="form-control" id="dob" required>
+                </div>
+                <div class="form-group">
+                    <label for="address" class="form-label">Address</label>
+                    <textarea class="form-control" id="address" rows="3" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="program" class="form-label">Desired Program</label>
+                    <select class="form-control" id="program" required>
+                        <option value="">Select a program</option>
+                        <option value="computer-science">Computer Science</option>
+                        <option value="business">Business Administration</option>
+                        <option value="engineering">Engineering</option>
+                        <option value="arts">Liberal Arts</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="education" class="form-label">Highest Education Level</label>
+                    <select class="form-control" id="education" required>
+                        <option value="">Select education level</option>
+                        <option value="high-school">High School</option>
+                        <option value="associate">Associate Degree</option>
+                        <option value="bachelor">Bachelor's Degree</option>
+                        <option value="master">Master's Degree</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Additional Information</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="financialAid">
+                        <label class="form-check-label" for="financialAid">
+                            I am interested in financial aid options
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="housing">
+                        <label class="form-check-label" for="housing">
+                            I need information about student housing
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="comments" class="form-label">Additional Comments</label>
+                    <textarea class="form-control" id="comments" rows="4"></textarea>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#"><button type="submit" class="button">Submit</button></a>
+                </div>
+            </form>
+        </div>
+    
+    </section>
+
+    
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
