@@ -3,6 +3,7 @@
     --primary-color-dark: #680202;
     --text-color: #322F2F;
     --white-color: #FFFFFF;
+    --white-smoke-color: rgb(222, 222, 222);
 }
 
 *{
@@ -144,7 +145,6 @@ p{
 .contact-login {
     display: flex;
     align-items: center;
-    justify-content: flex-end;
     gap: 0.7rem;
 }
 .call-us {
@@ -171,6 +171,25 @@ p{
 }
 
 /* Navbar */
+
+.custom-toggler {
+    border: 1px solid #3e0808;
+    background-color: transparent;
+    font-size: 24px;
+    padding: 6px 14px;
+    transition: 0.2s ease;
+    color: #3e0808;
+}
+
+.custom-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.custom-toggler:hover {
+    color: #ffffff;
+    border-color: white;
+}
 
 .custom-navbar {
     background-color: var(--primary-color);
@@ -610,6 +629,7 @@ p{
     padding: 80px 0;
     position: relative;
 }
+
 .contact-image {
     position: absolute;
     bottom: 0px;
@@ -617,7 +637,6 @@ p{
     height: auto;
     width: 40%;
     object-fit: cover;
-
 }
 .vertical-line {
     width: 2px;
@@ -653,10 +672,141 @@ p{
     background-color: rgba(162, 27, 27, 0.05);
 }
 .form-title {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
     color: var(--primary-color);
     margin-bottom: 20px;
     position: relative;
     padding-bottom: 10px;
+}
+
+/* About page/Section */
+
+.about-hero-section{
+    height: 50vh;
+}
+
+.about-hero-section h1, .about-hero-section h2{
+    color: #ddd7d7;
+    text-shadow: 2px 2px 5px black;
+    font-weight: 700;
+}
+
+.about-hero-section .hero-overlay{
+    backdrop-filter: blur(5px);
+}
+
+.tab-section {
+    padding: 50px 0;
+    background: rgb(162,27,27);
+    background: linear-gradient(180deg, rgba(162,27,27,1) 17%, rgba(255,255,255,1) 54%);
+}
+
+.tab-section .nav-tabs {
+    border-bottom: none;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    justify-content: center;
+}
+
+.nav-tabs::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.tab-section .nav-tabs .nav-item {
+    flex: 0 0 auto;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tab-section .nav-tabs .nav-link {
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+
+.tab-section .nav-tabs .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.tab-section .nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-section .tab-content {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.tab-section .tab-pane h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tab-section .tab-pane p {
+    color: var(--text-color);
+}
+
+
+.edu-section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #222;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.edu-course-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.edu-course-item:hover {
+    transform: translateY(-5px);
+}
+
+.edu-course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.edu-course-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.edu-course-name {
+    color: var(--white-color) !important;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
 }

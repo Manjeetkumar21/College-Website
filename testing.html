@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <style>
+       :root {
+    --primary-color: #A21B1B;
+    --primary-color-dark: #680202;
+    --text-color: #322F2F;
+    --white-color: #FFFFFF;
+}
+
+.tab-section {
+    padding: 50px 0;
+    background-color: var(--primary-color);
+}
+
+.nav-tabs {
+    border-bottom: none;
+    margin-bottom: 20px;
+}
+
+.nav-tabs .nav-item {
+    margin-right: 5px;
+}
+
+.nav-tabs .nav-link {
+    color: var(--white-color);
+    background-color: rgba(255, 255, 255, 0.1);
+    border: none;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.5px;
+}
+
+.nav-tabs .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.nav-tabs .nav-link.active {
+    color: var(--primary-color);
+    background-color: var(--white-color);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-content {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab-pane h3 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.tab-pane p {
+    color: var(--text-color);
+}
+
+@media (max-width: 768px) {
+    .nav-tabs {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        white-space: nowrap;
+        padding-bottom: 10px;
+    }
+    
+    .nav-tabs .nav-item {
+        float: none;
+        display: inline-block;
+    }
+
+    .nav-tabs .nav-link {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
+}
+
+.featured-courses {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.section-title {
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.course-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.course-card:hover {
+    transform: translateY(-5px);
+}
+
+.course-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.course-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.course-title {
+    color: var(--white-color);
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+@media (max-width: 767px) {
+    .course-image {
+        height: 150px;
+    }
+
+    .course-title {
+        font-size: 1rem;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="tab-section">
+        <div class="container">
+            <ul class="nav nav-tabs justify-content-center" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="organization-tab" data-bs-toggle="tab" data-bs-target="#organization" type="button" role="tab" aria-controls="organization" aria-selected="true">Organization</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="vision-mission-tab" data-bs-toggle="tab" data-bs-target="#vision-mission" type="button" role="tab" aria-controls="vision-mission" aria-selected="false">Vision & Mission</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="management-tab" data-bs-toggle="tab" data-bs-target="#management" type="button" role="tab" aria-controls="management" aria-selected="false">Management</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="administration-tab" data-bs-toggle="tab" data-bs-target="#administration" type="button" role="tab" aria-controls="administration" aria-selected="false">Administration</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="research-tab" data-bs-toggle="tab" data-bs-target="#research" type="button" role="tab" aria-controls="research" aria-selected="false">Research</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="founder-tab" data-bs-toggle="tab" data-bs-target="#founder" type="button" role="tab" aria-controls="founder" aria-selected="false">Founder</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" id="achievements-tab" data-bs-toggle="tab" data-bs-target="#achievements" type="button" role="tab" aria-controls="achievements" aria-selected="false">Achievements</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="organization" role="tabpanel" aria-labelledby="organization-tab">
+                    <h3>Organization</h3>
+                    <p>Content about the organization goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="vision-mission" role="tabpanel" aria-labelledby="vision-mission-tab">
+                    <h3>Vision & Mission</h3>
+                    <p>Content about vision and mission goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="management" role="tabpanel" aria-labelledby="management-tab">
+                    <h3>Management</h3>
+                    <p>Content about management goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="administration" role="tabpanel" aria-labelledby="administration-tab">
+                    <h3>Administration</h3>
+                    <p>Content about administration goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="research" role="tabpanel" aria-labelledby="research-tab">
+                    <h3>Research</h3>
+                    <p>Content about research goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="founder" role="tabpanel" aria-labelledby="founder-tab">
+                    <h3>Founder</h3>
+                    <p>Content about the founder goes here.</p>
+                </div>
+                <div class="tab-pane fade" id="achievements" role="tabpanel" aria-labelledby="achievements-tab">
+                    <h3>Achievements</h3>
+                    <p>Content about achievements goes here.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="featured-courses">
+        <div class="container">
+            <h2 class="section-title">Our Featured Courses</h2>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Engineering" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Engineering</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Bachelor of Arts" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Bachelor of Arts</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Bachelor of Science" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Bachelor of Science</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Bachelor of Commerce" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Bachelor of Commerce</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Law" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Law</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Medicine" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Medicine</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="MBA" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">MBA</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="course-card">
+                        <img src="Images/Book.jpg" alt="Computer Science" class="course-image">
+                        <div class="course-overlay">
+                            <h3 class="course-title">Computer Science</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

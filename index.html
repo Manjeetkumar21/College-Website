@@ -30,7 +30,7 @@
                         <h5>Academy</h5>
                     </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-none d-md-flex justify-content-end">
                     <div class="contact-login">
                         <i class="fa-solid fa-phone"></i>
                         <div class="call-us">
@@ -47,8 +47,11 @@
     <!-- Navbar Section -->
     <nav class="navbar navbar-expand-lg custom-navbar py-1">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars"></i>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-between w-100">
@@ -56,7 +59,7 @@
                         <a class="nav-link px-3" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#">About Us</a>
+                        <a class="nav-link px-3" href="about.html">About Us</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Administration</a>
@@ -91,7 +94,7 @@
     <!-- Latest News -->
     <section class="latest-news-section">
     
-            <div class="row">
+            <div class="row gx-0">
                 <div class="col-12">
                     <div class="news-container d-flex align-items-center">
                         <div class="news-label position-absolute">Latest News</div>
@@ -195,7 +198,7 @@
             <div class="row mt-5">
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Class.jpg" alt="Classroom">
+                        <img src="Images/Class.jpg" alt="Classroom">
                         <h3 class="campus-card-title">Classroom</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">Modern classrooms equipped with smart boards and comfortable seating for an optimal learning environment.</p>
@@ -204,7 +207,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Library.jpg" alt="Library">
+                        <img src="Images/Library.jpg" alt="Library">
                         <h3 class="campus-card-title">Library</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">Extensive collection of books, journals, and digital resources to support academic pursuits and research.</p>
@@ -213,7 +216,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Lab.jpg" alt="Laboratory">
+                        <img src="Images/Lab.jpg" alt="Laboratory">
                         <h3 class="campus-card-title">Laboratory</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">State-of-the-art laboratories for hands-on learning and cutting-edge research in various disciplines.</p>
@@ -222,7 +225,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Hostel.jpg" alt="Hostel">
+                        <img src="Images/Hostel.jpg" alt="Hostel">
                         <h3 class="campus-card-title">Hostel</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">Comfortable and secure accommodation for students, fostering a sense of community and independence.</p>
@@ -231,7 +234,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Canteen.jpg" alt="Canteen">
+                        <img src="Images/Canteen.jpg" alt="Canteen">
                         <h3 class="campus-card-title">Canteen</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">Diverse and nutritious food options in a welcoming atmosphere, catering to various dietary preferences.</p>
@@ -240,7 +243,7 @@
                 </div>
                 <div class="col-md-4 col-sm-6">
                     <div class="campus-card">
-                        <img src="/Images/Hospital.jpg" alt="Hospitality">
+                        <img src="Images/Hospital.jpg" alt="Hospitality">
                         <h3 class="campus-card-title">Hospitality</h3>
                         <div class="campus-card-body">
                             <p class="campus-card-text">Dedicated staff ensuring a warm and supportive environment for students, faculty, and visitors alike.</p>
@@ -255,7 +258,7 @@
     <section class="featured-courses">
         <div class="container featured-courses-content">
             <div class="text-white headline d-flex justify-content-center align-items-center">
-                <h2 class="section-title-dark text-white">Campus Infrastrucre</h2>
+                <h2 class="section-title-dark text-white">Our Featured Courses</h2>
             </div>
             <div class="row mt-5">
                 <div class="col-lg-4 col-md-6">
@@ -365,7 +368,7 @@
     <!-- Footer Section -->
     <footer class="footer">
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col-md-3 col-sm-6">
                     <img src="Images/logo.png" alt="College Logo" class="college-logo">
                     
@@ -374,7 +377,7 @@
                     <h5>Quick Links</h5>
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">About Us</a></li>
+                        <li><a href="about.html">About Us</a></li>
                         <li><a href="#">Academics</a></li>
                         <li><a href="#">Admissions</a></li>
                         <li><a href="#">Campus Life</a></li>
@@ -417,9 +420,9 @@
                     <p class="m-0 text-white">&copy; 2024 Safalta Academy. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
-                    <a href="#" class="text-light me-2">Privacy Policy</a>
-                    <a href="#" class="text-light me-2">Terms of Use</a>
-                    <a href="#" class="text-light">Accessibility</a>
+                    <a href="#" class="text-light me-2">Privacy Policy&nbsp;</a><span>|</span>
+                    <a href="#" class="text-light me-2">&nbsp;Terms of Use&nbsp;</a><span>|</span>
+                    <a href="#" class="text-light">&nbsp;Accessibility</a>
                 </div>
             </div>
         </div>
