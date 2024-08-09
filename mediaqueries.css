@@ -10,7 +10,9 @@
   .contact-image-container {
     height: 400px;
   }
-
+ .hero-section{
+     height:200px;
+ }
   .contact-image {
     width: 90%;
   }
