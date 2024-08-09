@@ -322,7 +322,7 @@ p{
 /* Statistics Section */
 
 .stats-section {
-    background-image: url('./Images/college.jpg');
+    background-image: url('Images/college.jpg');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -447,7 +447,7 @@ p{
 /* Featured Coursed */
 
 .featured-courses {
-    background-image: url('/Images/Library_BG.jpg');
+    background-image: url('Images/Library_BG.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
