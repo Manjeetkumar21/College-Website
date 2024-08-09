@@ -819,14 +819,14 @@ p{
     background-color: #f8f9fa;
 }
 
-.blog-tabs {
+.blog-section .blog-tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 30px;
     flex-wrap: wrap;
 }
 
-.blog-tabs .nav-link {
+.blog-section .blog-tabs .nav-link {
     color: var(--text-color);
     background-color: transparent;
     border: 2px solid var(--primary-color);
@@ -837,13 +837,13 @@ p{
     font-weight: 600;
 }
 
-.blog-tabs .nav-link:hover,
-.blog-tabs .nav-link.active {
+.blog-section .blog-tabs .nav-link:hover,
+.blog-section .blog-tabs .nav-link.active {
     color: var(--white-color);
     background-color: var(--primary-color);
 }
 
-.blog-card {
+.blog-section .blog-card {
     background-color: var(--white-color);
     border-radius: 10px;
     overflow: hidden;
@@ -851,34 +851,34 @@ p{
     transition: transform 0.3s ease;
 }
 
-.blog-card:hover {
+.blog-section .blog-card:hover {
     transform: translateY(-5px);
 }
 
-.blog-image {
+.blog-section .blog-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
 }
 
-.blog-content {
+.blog-section .blog-content {
     padding: 20px;
 }
 
-.blog-title {
+.blog-section .blog-title {
     color: var(--primary-color);
     font-size: 1.3rem;
     margin-bottom: 10px;
     font-weight: 700;
 }
 
-.blog-excerpt {
+.blog-section .blog-excerpt {
     color: var(--text-color);
     font-size: 0.9rem;
     margin-bottom: 15px;
 }
 
-.blog-meta {
+.blog-section .blog-meta {
     display: flex;
     justify-content: space-between;
     color: #6c757d;
@@ -886,7 +886,7 @@ p{
     margin-bottom: 15px;
 }
 
-.read-more {
+.blog-section .read-more {
     display: inline-block;
     color: var(--primary-color);
     font-weight: 600;
@@ -894,7 +894,7 @@ p{
     transition: color 0.3s ease;
 }
 
-.read-more:hover {
+.blog-section .read-more:hover {
     color: var(--primary-color-dark);
 }
 
@@ -1092,4 +1092,285 @@ p{
 .form-check-input:checked {
     background-color: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+/* Notice Section */
+
+.notice-section{
+    padding: 50px 10px;
+    background-color: #f4f4f4;
+}
+.notice-section .notice-board-container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: var(--white-color);
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border: 3px solid var(--primary-color);
+}
+
+.notice-section .board-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 1.5rem;
+    position: relative;
+}
+
+.notice-section .board-header h2 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--white-color);
+}
+
+.notice-section .notice-list {
+    max-height: 500px;
+    overflow-y: auto;
+    padding: 2rem;
+}
+
+.notice-section .notice-item {
+    background-color: var(--white-color);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+    border-left: 5px solid var(--primary-color);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.notice-section .notice-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.notice-section .notice-date {
+    color: var(--primary-color-dark);
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.notice-section .notice-badge {
+    background-color: var(--accent-color);
+    color: var(--primary-color-dark);
+    font-size: 0.8rem;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.notice-section .notice-title {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.notice-section .notice-content {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.view-all-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 0.75rem 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    border-radius: 30px;
+}
+
+.view-all-btn:hover {
+    background-color: var(--primary-color-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    color: white;
+}
+
+.notice-section .notice-list::-webkit-scrollbar {
+    width: 5px;
+}
+
+.notice-section .notice-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.notice-section .notice-list::-webkit-scrollbar-thumb {
+    background: #a4a1a1;
+    border-radius: 10px;
+    margin-right: 2px;
+}
+
+.notice-section .notice-list::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color-dark);
+}
+
+@media (max-width: 768px) {
+    .notice-section .notice-list {
+        max-height: 400px;
+        padding: 1rem;
+    }
+
+    .notice-section .board-header{
+        padding: 1rem;
+    }
+
+    .notice-section .board-header h2{
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+    
+    .notice-section .notice-title {
+    font-size: 1rem;
+}
+
+.notice-section .notice-content, .notice-section .notice-date {
+    font-size: 0.9rem;
+}
+
+}
+
+/* Blog Details */
+
+.blog-details-section {
+    padding: 60px 0px;
+}
+
+.blog-details-section .blog-container {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.blog-details-section .blog-header {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 2rem;
+    position: relative;
+}
+
+.blog-details-section .blog-header h2 {
+    margin: 0;
+    font-weight: 700;
+    letter-spacing: 1px;
+    font-size: 1.5rem;
+    text-align: center;
+    color: var(--white-color);
+}
+
+.blog-details-section .blog-content {
+    padding: 2rem;
+}
+
+.blog-details-section .blog-meta {
+    font-size: 1rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.blog-details-section .blog-meta span {
+    margin-right: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.blog-details-section .blog-image {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.blog-details-section .blog-image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.blog-details-section .blog-image:hover img {
+    transform: scale(1.05);
+}
+
+.blog-details-section .blog-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: var(--text-color);
+}
+
+.blog-details-section .blog-text h2 {
+    color: var(--primary-color);
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.blog-details-section .recent-blogs {
+    background-color: var(--white-color);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    margin-top: 2rem;
+}
+
+.blog-details-section .recent-blogs h3{
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 6px;
+    text-align:center;
+    background-color: #dedede;
+}
+
+.blog-details-section .recent-blog-item {
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--white-smoke-color);
+    transition: all 0.3s ease;
+}
+
+.blog-details-section .recent-blog-item:last-child {
+    border-bottom: none;
+}
+
+.blog-details-section .recent-blog-item:hover {
+    transform: translateX(5px);
+}
+
+.blog-details-section .recent-blog-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-color-dark);
+    margin-bottom: 0.5rem;
+}
+
+.blog-details-section .recent-blog-meta {
+    font-size: 0.8rem;
+    color: var(--primary-color);
+}
+
+.blog-details-section .tag {
+    background-color: var(--white-smoke-color);
+    color: var(--primary-color);
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.blog-details-section .tag:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
 }

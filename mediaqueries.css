@@ -1,8 +1,7 @@
 @media screen and (max-width: 760px) {
-
-    h2{
-        font-size: 1.5rem;
-    }
+  h2 {
+    font-size: 1.5rem;
+  }
   .nav-item {
     text-align: center;
     margin-top: 0.5rem;
@@ -49,7 +48,7 @@
     font-size: 0.9rem;
   }
 
-  .blog-title {
+  .blog-title, .blog-details-section .blog-text h2 {
     font-size: 1.1rem;
   }
 
@@ -72,7 +71,7 @@
     border-color: transparent var(--white-color) transparent transparent;
   }
 
-  .content h2{
+  .content h2,.blog-details-section .blog-header h2 {
     font-size: 1.2rem;
   }
   .left::after,
@@ -85,6 +84,16 @@
 
   .admission-form-container {
     padding: 20px;
+  }
+
+  .blog-details-section .blog-content {
+    padding: 1rem;
+}
+.blog-details-section .blog-header{
+  padding: 1.5rem;
+}
+.blog-details-section .blog-meta{
+  font-size: 0.8rem;
 }
 }
 
