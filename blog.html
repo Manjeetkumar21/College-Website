@@ -17,11 +17,11 @@
 
     </div>
 
-    <!-- Top Banner -->
-    <div class="top-banner">
+       <!-- Top Banner -->
+       <div class="top-banner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-9 col-md-6 d-flex align-items-center">
                     <div class="logo">
                         <img src="Images/logo.png" alt="Safalta Academy Logo">
                     </div>
@@ -29,6 +29,11 @@
                         <h2>SAFALTA</h2>
                         <h5>Academy</h5>
                     </div>
+                </div>
+                <div class="col-3 d-md-none">
+                    <button class="navbar-toggler custom-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
                 <div class="col-md-6 d-none d-md-flex justify-content-end">
                     <div class="contact-login">
@@ -43,16 +48,10 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg custom-navbar py-1">
+    <nav class="navbar navbar-expand-lg custom-navbar py-1 d-none d-md-block">
         <div class="container">
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-between w-100">
                     <li class="nav-item">
@@ -68,7 +67,7 @@
                         <a class="nav-link px-3" href="#">Academics</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-3" href="#">Students Corner</a>
+                        <a class="nav-link px-3" href="blog.html">Blogs</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link px-3" href="#">Activities</a>
@@ -83,6 +82,23 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Navbar -->
+    <div class="collapse navbar-collapse mobile-nav" id="navbarNav">
+        <button class="close-nav">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section about-hero-section">
@@ -99,10 +115,10 @@
                     <button class="nav-link active" id="all-blogs-tab" data-bs-toggle="pill" data-bs-target="#all-blogs" type="button" role="tab" aria-controls="all-blogs" aria-selected="true">All Blogs</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="student-blogs-tab" data-bs-toggle="pill" data-bs-target="#student-blogs" type="button" role="tab" aria-controls="student-blogs" aria-selected="false">Student Blogs</button>
+                    <button class="nav-link" id="student-blogs-tab" data-bs-toggle="pill" data-bs-target="#student-blogs" type="button" role="tab" aria-controls="student-blogs" aria-selected="false">Student</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" id="college-blogs-tab" data-bs-toggle="pill" data-bs-target="#college-blogs" type="button" role="tab" aria-controls="college-blogs" aria-selected="false">College Blogs</button>
+                    <button class="nav-link" id="college-blogs-tab" data-bs-toggle="pill" data-bs-target="#college-blogs" type="button" role="tab" aria-controls="college-blogs" aria-selected="false">College</button>
                 </li>
             </ul>
             <div class="tab-content" id="blogTabContent">
@@ -110,7 +126,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -125,7 +141,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -139,7 +155,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -153,7 +169,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -167,7 +183,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -181,7 +197,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -200,7 +216,7 @@
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -214,7 +230,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -228,7 +244,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -242,7 +258,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -263,7 +279,7 @@
                         <!-- Repeat this structure for each blog post -->
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>
@@ -277,7 +293,7 @@
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
                             <div class="blog-card">
-                                <img src="Images/Book.jpg" alt="Blog Post Title" class="blog-image">
+                                <img src="Images/Book.webp" alt="Blog Post Title" class="blog-image">
                                 <div class="blog-content">
                                     <h3 class="blog-title">Blog Post Title</h3>
                                     <p class="blog-excerpt">Lorem ipsum dolor sit amet consectetur adipisicing elit...</p>

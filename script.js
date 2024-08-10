@@ -32,3 +32,26 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.5 });
 
 observer.observe(statsSection);
+
+
+// Navbar
+document.addEventListener('DOMContentLoaded', function() {
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const mobileNav = document.querySelector('.mobile-nav');
+    const closeNav = document.querySelector('.close-nav');
+
+    navbarToggler.addEventListener('click', function() {
+        mobileNav.classList.add('show');
+    });
+
+    closeNav.addEventListener('click', function() {
+        mobileNav.classList.remove('show');
+    });
+
+    // Close nav when clicking outside
+    document.addEventListener('click', function(event) {
+        if (!mobileNav.contains(event.target) && !navbarToggler.contains(event.target)) {
+            mobileNav.classList.remove('show');
+        }
+    });
+});

@@ -2,10 +2,6 @@
   h2 {
     font-size: 1.5rem;
   }
-  .nav-item {
-    text-align: center;
-    margin-top: 0.5rem;
-  }
 
   .contact-image-container {
     height: 400px;
@@ -125,5 +121,78 @@
   .stat-icon {
     margin-right: 0;
     margin-bottom: 10px;
+  }
+}
+
+/* Mobile Navbar */
+@media (max-width: 767px) {
+  .mobile-nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      max-width: 300px;
+      height: 100vh;
+      background-color: var(--primary-color);
+      z-index: 1000;
+      padding: 20px;
+      overflow-y: auto;
+      transition: right 0.3s ease-in-out;
+  }
+
+  .mobile-nav.show {
+      right: 0;
+  }
+
+  .mobile-nav .navbar-nav {
+      margin-top: 60px;
+  }
+
+  .mobile-nav .nav-item {
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .mobile-nav .nav-link {
+      color: var(--white-color);
+      font-size: 1rem;
+      padding: 10px 0;
+      transition: all 0.3s ease;
+  }
+
+  .mobile-nav .nav-link:hover {
+      color: var(--white-smoke-color);
+      padding-left: 10px;
+  }
+
+  .close-nav {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      color: var(--white-color);
+      font-size: 1.5rem;
+      cursor: pointer;
+  }
+
+  .custom-toggler {
+      z-index: 1001;
+  }
+}
+
+/* Adjust top banner for mobile */
+@media (max-width: 767px) {
+  .logo img {
+      height: 5rem;
+  }
+
+  .academy-name h2 {
+      font-size: 1.5rem;
+  }
+
+  .academy-name h5 {
+      font-size: 0.9rem;
+      letter-spacing: 0.4rem;
   }
 }

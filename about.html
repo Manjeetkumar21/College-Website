@@ -17,11 +17,11 @@
 
     </div>
 
-    <!-- Top Banner -->
-    <div class="top-banner">
+       <!-- Top Banner -->
+       <div class="top-banner">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-6 d-flex align-items-center">
+                <div class="col-9 col-md-6 d-flex align-items-center">
                     <div class="logo">
                         <img src="Images/logo.png" alt="Safalta Academy Logo">
                     </div>
@@ -29,6 +29,11 @@
                         <h2>SAFALTA</h2>
                         <h5>Academy</h5>
                     </div>
+                </div>
+                <div class="col-3 d-md-none">
+                    <button class="navbar-toggler custom-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
                 </div>
                 <div class="col-md-6 d-none d-md-flex justify-content-end">
                     <div class="contact-login">
@@ -43,16 +48,10 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Navbar Section -->
-    <nav class="navbar navbar-expand-lg custom-navbar py-1">
+    <nav class="navbar navbar-expand-lg custom-navbar py-1 d-none d-md-block">
         <div class="container">
-            <!-- <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button> -->
-            <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <i class="fa-solid fa-bars"></i>
-            </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav justify-content-between w-100">
                     <li class="nav-item">
@@ -83,6 +82,23 @@
             </div>
         </div>
     </nav>
+    
+    <!-- Mobile Navbar -->
+    <div class="collapse navbar-collapse mobile-nav" id="navbarNav">
+        <button class="close-nav">
+            <i class="fa-solid fa-times"></i>
+        </button>
+        <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+            <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+            <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+            <li class="nav-item"><a class="nav-link" href="#">Activities</a></li>
+            <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+            <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section about-hero-section">
@@ -128,7 +144,7 @@
                             </div>
                             <div class="row align-items-center mt-4">
                                 <div class="col-md-6 my-4">
-                                    <img src="Images/college 1.jpg" alt="Our Campus" class="campus-image">
+                                    <img src="Images/college 1.webp" alt="Our Campus" class="campus-image">
                                 </div>
                                 <div class="col-md-6">
                                     <p>Welcome to our beautiful campus! Nestled in the heart of a vibrant community, our campus offers state-of-the-art facilities and a inspiring learning environment. With lush green spaces, modern architecture, and cutting-edge technology, we provide the perfect setting for academic growth and personal development.</p>
@@ -152,7 +168,7 @@
                                 <div class="row">
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Engineering" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Engineering" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Engineering</h3>
                                             </div>
@@ -160,7 +176,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Bachelor of Arts" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Bachelor of Arts" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Bachelor of Arts</h3>
                                             </div>
@@ -168,7 +184,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Bachelor of Science" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Bachelor of Science" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Bachelor of Science</h3>
                                             </div>
@@ -176,7 +192,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Bachelor of Commerce" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Bachelor of Commerce" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Bachelor of Commerce</h3>
                                             </div>
@@ -184,7 +200,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Law" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Law" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Law</h3>
                                             </div>
@@ -192,7 +208,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Medicine" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Medicine" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Medicine</h3>
                                             </div>
@@ -200,7 +216,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="MBA" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="MBA" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">MBA</h3>
                                             </div>
@@ -208,7 +224,7 @@
                                     </div>
                                     <div class="col-md-3 col-sm-6 mb-4">
                                         <div class="edu-course-item">
-                                            <img src="Images/Book.jpg" alt="Computer Science" class="edu-course-image">
+                                            <img src="Images/Book.webp" alt="Computer Science" class="edu-course-image">
                                             <div class="edu-course-overlay">
                                                 <h3 class="edu-course-name">Computer Science</h3>
                                             </div>

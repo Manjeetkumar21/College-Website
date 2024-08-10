@@ -176,6 +176,7 @@ p{
 
 .custom-toggler {
     border: 1px solid #3e0808;
+    border-radius: 5px;
     background-color: transparent;
     font-size: 24px;
     padding: 6px 14px;
@@ -183,15 +184,6 @@ p{
     color: #3e0808;
 }
 
-.custom-toggler:focus {
-    outline: none;
-    box-shadow: none;
-}
-
-.custom-toggler:hover {
-    color: #ffffff;
-    border-color: white;
-}
 
 .custom-navbar {
     background-color: var(--primary-color);
@@ -211,7 +203,7 @@ p{
 .hero-section {
     position: relative;
     height: 500px;
-    background-image: url('Images/college.jpg');
+    background-image: url('Images/college.webp');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -322,7 +314,7 @@ p{
 /* Statistics Section */
 
 .stats-section {
-    background-image: url('Images/college.jpg');
+    background-image: url('Images/college.webp');
     background-size: cover;
     background-position: center;
     position: relative;
@@ -447,7 +439,7 @@ p{
 /* Featured Coursed */
 
 .featured-courses {
-    background-image: url('Images/Library_BG.jpg');
+    background-image: url('Images/Library_BG.webp');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

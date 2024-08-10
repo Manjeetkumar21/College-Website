@@ -3,235 +3,592 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Future of AI in Education - Blog Post</title>
+    <title>Safalta Academy</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
     <style>
-        :root {
-            --primary-color: #A21B1B;
-            --primary-color-dark: #680202;
-            --text-color: #322F2F;
-            --white-color: #FFFFFF;
-            --white-smoke-color: rgb(222, 222, 222);
-        }
+       /* Mobile Navbar */
+@media (max-width: 767px) {
+    .mobile-nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background-color: var(--primary-color);
+        z-index: 1000;
+        padding: 20px;
+        overflow-y: auto;
+        transition: right 0.3s ease-in-out;
+    }
 
-        body {
-            background-color: var(--white-smoke-color);
-            color: var(--text-color);
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
+    .mobile-nav.show {
+        right: 0;
+    }
 
-        .blog-container {
-            background-color: var(--white-color);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-            margin-top: 2rem;
-            margin-bottom: 2rem;
-        }
+    .mobile-nav .navbar-nav {
+        margin-top: 60px;
+    }
 
-        .blog-header {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 2rem;
-            position: relative;
-        }
+    .mobile-nav .nav-item {
+        margin-bottom: 15px;
+    }
 
-        .blog-header h1 {
-            margin: 0;
-            font-weight: 700;
-            letter-spacing: 1px;
-            font-size: 2.5rem;
-        }
+    .mobile-nav .nav-link {
+        color: var(--white-color);
+        font-size: 1.2rem;
+        padding: 10px 0;
+        transition: all 0.3s ease;
+    }
 
-        .blog-content {
-            padding: 2rem;
-        }
+    .mobile-nav .nav-link:hover {
+        color: var(--white-smoke-color);
+        padding-left: 10px;
+    }
 
-        .blog-meta {
-            font-size: 1rem;
-            color: var(--primary-color);
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-        }
+    .close-nav {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: var(--white-color);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
 
-        .blog-meta span {
-            margin-right: 1rem;
-            margin-bottom: 0.5rem;
-        }
+    .custom-toggler {
+        z-index: 1001;
+    }
+}
 
-        .blog-image {
-            border-radius: 10px;
-            overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
+/* Adjust top banner for mobile */
+@media (max-width: 767px) {
+    .logo img {
+        height: 5rem;
+    }
 
-        .blog-image img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.3s ease;
-        }
+    .academy-name h2 {
+        font-size: 1.5rem;
+    }
 
-        .blog-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .blog-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: var(--text-color);
-        }
-
-        .blog-text h2 {
-            color: var(--primary-color);
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
-
-        .back-button {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-            padding: 0.75rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            display: inline-block;
-            margin-top: 2rem;
-            font-weight: bold;
-        }
-
-        .back-button:hover {
-            background-color: var(--primary-color-dark);
-            color: var(--white-color);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .recent-blogs {
-            background-color: var(--white-color);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            padding: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .recent-blog-item {
-            padding: 1rem 0;
-            border-bottom: 1px solid var(--white-smoke-color);
-            transition: all 0.3s ease;
-        }
-
-        .recent-blog-item:last-child {
-            border-bottom: none;
-        }
-
-        .recent-blog-item:hover {
-            transform: translateX(5px);
-        }
-
-        .recent-blog-title {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--primary-color-dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .recent-blog-meta {
-            font-size: 0.8rem;
-            color: var(--primary-color);
-        }
-
-        .tag {
-            background-color: var(--white-smoke-color);
-            color: var(--primary-color);
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.5rem;
-            display: inline-block;
-            transition: all 0.3s ease;
-        }
-
-        .tag:hover {
-            background-color: var(--primary-color);
-            color: var(--white-color);
-        }
-
-        @media (max-width: 768px) {
-            .recent-blogs {
-                margin-top: 2rem;
-            }
-        }
+    .academy-name h5 {
+        font-size: 0.9rem;
+    }
+}
     </style>
 </head>
 <body>
+    <div class="top-section">
+
+    </div>
+
+   <!-- Top Banner -->
+<div class="top-banner">
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="blog-container">
-                    <div class="blog-header">
-                        <h1>The Future of AI in Education</h1>
+        <div class="row align-items-center">
+            <div class="col-9 col-md-6 d-flex align-items-center">
+                <div class="logo">
+                    <img src="Images/logo.png" alt="Safalta Academy Logo">
+                </div>
+                <div class="academy-name">
+                    <h2>SAFALTA</h2>
+                    <h5>Academy</h5>
+                </div>
+            </div>
+            <div class="col-3 d-md-none">
+                <button class="navbar-toggler custom-toggler float-end" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+            <div class="col-md-6 d-none d-md-flex justify-content-end">
+                <div class="contact-login">
+                    <i class="fa-solid fa-phone"></i>
+                    <div class="call-us">
+                       <h3 class="mb-1">Call Us</h3>
+                        <p class="mb-0">+91 XXXXX 55555</p>
                     </div>
-                    <div class="blog-content">
-                        <div class="blog-meta">
-                            <span><i class="far fa-user me-2"></i>John Doe</span>
-                            <span><i class="far fa-calendar me-2"></i>August 15, 2024</span>
-                            <span><i class="far fa-clock me-2"></i>5 min read</span>
+                    <a href="#"><button class="button">Login</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Navbar Section -->
+<nav class="navbar navbar-expand-lg custom-navbar py-1 d-none d-md-block">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav justify-content-between w-100">
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="courses.html">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Academics</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="blog.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="#">Activities</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="admission.html">Admission</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3" href="contact.html">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Navbar -->
+<div class="collapse navbar-collapse mobile-nav" id="navbarNav">
+    <button class="close-nav">
+        <i class="fa-solid fa-times"></i>
+    </button>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+        <li class="nav-item"><a class="nav-link" href="courses.html">Courses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Academics</a></li>
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blogs</a></li>
+        <li class="nav-item"><a class="nav-link" href="#">Activities</a></li>
+        <li class="nav-item"><a class="nav-link" href="admission.html">Admission</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+    </ul>
+</div>
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+        </div>
+    </section>
+
+    <!-- Latest News -->
+    <section class="latest-news-section">
+    
+            <div class="row gx-0">
+                <div class="col-12">
+                    <div class="news-container d-flex align-items-center">
+                        <div class="news-label position-absolute">Latest News</div>
+                        <div class="news-items">
+                            <span class="news-item">Breaking: Major scientific breakthrough announced</span>
+                            <span class="news-item">Tech giant unveils new smartphone</span>
+                            <span class="news-item">Global climate conference reaches historic agreement</span>
+                            <span class="news-item">Sports team wins championship in dramatic fashion</span>
                         </div>
-                        <div class="blog-image">
-                            <img src="https://via.placeholder.com/800x400" alt="AI in Education">
-                        </div>
-                        <div class="blog-text">
-                            <p>Artificial Intelligence is revolutionizing the education sector, offering personalized learning experiences and advanced assessment techniques. This article explores the potential impact of AI on the future of education.</p>
-                            
-                            <h2>Personalized Learning</h2>
-                            <p>AI algorithms can analyze a student's learning patterns to create tailored curricula...</p>
-                            
-                            <h2>Intelligent Tutoring Systems</h2>
-                            <p>AI-powered tutoring systems are becoming increasingly sophisticated, providing instant feedback...</p>
-                            
-                            <h2>Challenges and Considerations</h2>
-                            <p>While the potential of AI in education is immense, there are challenges to consider...</p>
-                        </div>
-                        <div class="mt-4">
-                            <span class="tag">Artificial Intelligence</span>
-                            <span class="tag">Education</span>
-                            <span class="tag">Technology</span>
-                        </div>
-                        <a href="#" class="back-button"><i class="fas fa-arrow-left me-2"></i>Back to Blog List</a>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4">
-                <div class="recent-blogs">
-                    <h3 class="mb-4">Recent Posts</h3>
-                    <div class="recent-blog-item">
-                        <h4 class="recent-blog-title">The Rise of Remote Learning</h4>
-                        <div class="recent-blog-meta">
-                            <span><i class="far fa-calendar me-2"></i>August 10, 2024</span>
+       
+    </section>
+
+    <!-- Our Campus -->
+    <section class="our-campus-section">
+        <div class="container my-5">
+            <div class="headline d-flex justify-content-center align-items-center">
+                <h2 class="section-title">Our Campus</h2>
+            </div>
+            <div class="row align-items-center mt-4">
+                <div class="col-md-6">
+                    <p>Welcome to our beautiful campus! Nestled in the heart of a vibrant community, our campus offers state-of-the-art facilities and a inspiring learning environment. With lush green spaces, modern architecture, and cutting-edge technology, we provide the perfect setting for academic growth and personal development.</p>
+                    <p>Our campus features:</p>
+                    <ul>
+                        <li>Spacious classrooms and lecture halls</li>
+                        <li>Well-equipped laboratories and research centers</li>
+                        <li>A comprehensive library with extensive resources</li>
+                        <li>Student-friendly study areas and collaboration spaces</li>
+                        <li>Sports facilities and recreation areas</li>
+                    </ul>
+                    <p>Whether you're attending classes, conducting research, or participating in extracurricular activities, our campus provides the perfect backdrop for your academic journey.</p>
+                </div>
+                <div class="col-md-6">
+                    <img src="Images/college 1.jpg" alt="Our Campus" class="campus-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Notice Section -->
+    <section class="notice-section">
+        <div class="notice-board-container">
+            <div class="board-header">
+                <h2><i class="fas fa-bullhorn me-2"></i>College Notice Board</h2>
+            </div>
+            <div class="notice-list">
+                <div class="notice-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="notice-date"><i class="far fa-calendar-alt me-2"></i>August 9, 2024</span>
+                        <span class="notice-badge">New</span>
+                    </div>
+                    <h5 class="notice-title">Campus Reopening Announcement</h5>
+                    <p class="notice-content">We are pleased to announce that the campus will be reopening on September 1, 2024. Please check your email for detailed instructions and safety protocols.</p>
+                </div>
+                <div class="notice-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="notice-date"><i class="far fa-calendar-alt me-2"></i>August 7, 2024</span>
+                    </div>
+                    <h5 class="notice-title">Extended Library Hours</h5>
+                    <p class="notice-content">To better accommodate student needs, the college library will now be open until 10 PM on weekdays. Take advantage of these extended hours for your studies!</p>
+                </div>
+                <div class="notice-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="notice-date"><i class="far fa-calendar-alt me-2"></i>August 5, 2024</span>
+                    </div>
+                    <h5 class="notice-title">Annual Career Fair: Save the Date</h5>
+                    <p class="notice-content">Mark your calendars for October 15, 2024! Our annual Career Fair is your opportunity to connect with potential employers and explore exciting career paths.</p>
+                </div>
+                <div class="notice-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="notice-date"><i class="far fa-calendar-alt me-2"></i>August 3, 2024</span>
+                    </div>
+                    <h5 class="notice-title">New Course Offerings for Fall Semester</h5>
+                    <p class="notice-content">Exciting new courses are now available for the upcoming semester. Visit the course catalog to explore these additions and enhance your academic journey.</p>
+                </div>
+                <div class="notice-item">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="notice-date"><i class="far fa-calendar-alt me-2"></i>August 1, 2024</span>
+                    </div>
+                    <h5 class="notice-title">Campus-Wide Wi-Fi Upgrade</h5>
+                    <p class="notice-content">We're upgrading our campus Wi-Fi network to provide faster and more reliable internet access. Please expect brief interruptions during the upgrade process.</p>
+                </div>
+            </div>
+            <div class="p-3 d-flex justify-content-center align-items-center">
+                <a href="#"><button class="button">Learn More</button></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats section -->
+    <section class="stats-section" id="stats-section">
+        <div class="stats-overlay"></div>
+        <div class="container stats-content">
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-user-graduate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="65739">0 <span>+</span></div>
+                            <div class="stat-text">Ongoing Students</div>
                         </div>
                     </div>
-                    <div class="recent-blog-item">
-                        <h4 class="recent-blog-title">Gamification in Education</h4>
-                        <div class="recent-blog-meta">
-                            <span><i class="far fa-calendar me-2"></i>August 5, 2024</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="4500">0 <span>+</span></div>
+                            <div class="stat-text">Current Students</div>
                         </div>
                     </div>
-                    <div class="recent-blog-item">
-                        <h4 class="recent-blog-title">The Impact of VR on Learning</h4>
-                        <div class="recent-blog-meta">
-                            <span><i class="far fa-calendar me-2"></i>July 28, 2024</span>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="200">0 <span>+</span></div>
+                            <div class="stat-text">Rank Holders</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6 mb-3">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fas fa-chalkboard-teacher"></i>
+                        </div>
+                        <div class="stat-info">
+                            <div class="stat-number" data-target="100">0 <span>+</span></div>
+                            <div class="stat-text">Faculties</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </section>
+
+    <!-- Campus Infrastrucre Section -->
+    <section class="campus-section">
+        <div class="container">
+            <div class="headline d-flex justify-content-center align-items-center">
+                <h2 class="section-title">Campus Infrastrucre</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Class.jpg" alt="Classroom">
+                        <h3 class="campus-card-title">Classroom</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">Modern classrooms equipped with smart boards and comfortable seating for an optimal learning environment.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Library.jpg" alt="Library">
+                        <h3 class="campus-card-title">Library</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">Extensive collection of books, journals, and digital resources to support academic pursuits and research.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Lab.jpg" alt="Laboratory">
+                        <h3 class="campus-card-title">Laboratory</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">State-of-the-art laboratories for hands-on learning and cutting-edge research in various disciplines.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Hostel.jpg" alt="Hostel">
+                        <h3 class="campus-card-title">Hostel</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">Comfortable and secure accommodation for students, fostering a sense of community and independence.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Canteen.jpg" alt="Canteen">
+                        <h3 class="campus-card-title">Canteen</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">Diverse and nutritious food options in a welcoming atmosphere, catering to various dietary preferences.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                    <div class="campus-card">
+                        <img src="Images/Hospital.jpg" alt="Hospitality">
+                        <h3 class="campus-card-title">Hospitality</h3>
+                        <div class="campus-card-body">
+                            <p class="campus-card-text">Dedicated staff ensuring a warm and supportive environment for students, faculty, and visitors alike.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="featured-courses">
+        <div class="container featured-courses-content">
+            <div class="text-white headline d-flex justify-content-center align-items-center">
+                <h2 class="section-title-dark text-white">Our Featured Courses</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-briefcase course-icon"></i>
+                        <h3 class="course-title">Management</h3>
+                        <p class="course-description">Develop leadership skills and business acumen with our comprehensive management program.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-cogs course-icon"></i>
+                        <h3 class="course-title">Engineering</h3>
+                        <p class="course-description">Explore cutting-edge technologies and innovative solutions in various engineering disciplines.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-pills course-icon"></i>
+                        <h3 class="course-title">Pharmacy</h3>
+                        <p class="course-description">Gain expertise in pharmaceutical sciences and contribute to healthcare advancements.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-laptop-code course-icon"></i>
+                        <h3 class="course-title">Computer Science</h3>
+                        <p class="course-description">Master programming languages and develop innovative software solutions.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-flask course-icon"></i>
+                        <h3 class="course-title">Biotechnology</h3>
+                        <p class="course-description">Explore the intersection of biology and technology to solve global challenges.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6">
+                    <div class="course-card">
+                        <i class="fas fa-chart-line course-icon"></i>
+                        <h3 class="course-title">Economics</h3>
+                        <p class="course-description">Analyze market trends and develop strategies for economic growth and sustainability.</p>
+                        <a href="#"><button class="button">Learn More</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Recruiters -->
+    <section class="top-recruiters">
+        <div class="container">
+            <div class="headline d-flex justify-content-center align-items-center">
+                <h2 class="section-title">Our Top Recruiters</h2>
+            </div>
+            <div class="row mt-5">
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/google.com" alt="Google">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/microsoft.com" alt="Microsoft">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/apple.com" alt="Apple">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/amazon.com" alt="Amazon">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/facebook.com" alt="Facebook">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/ibm.com" alt="IBM">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/intel.com" alt="Intel">
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-sm-6">
+                    <div class="recruiter-logo">
+                        <img src="https://logo.clearbit.com/cisco.com" alt="Cisco">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <img src="Images/logo.png" alt="College Logo" class="college-logo">
+                    
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Quick Links</h5>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Academics</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Campus Life</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Resources</h5>
+                    <ul>
+                        <li><a href="#">Library</a></li>
+                        <li><a href="#">Career Services</a></li>
+                        <li><a href="#">Student Portal</a></li>
+                        <li><a href="#">Faculty & Staff</a></li>
+                        <li><a href="#">Research</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <h5>Contact Us</h5>
+                    <ul>
+                        <li>123 College Avenue</li>
+                        <li>Anytown, ST 12345</li>
+                        <li>Phone: (123) 456-7890</li>
+                        <li>Email: info@college.edu</li>
+                    </ul>
+                    <div class="social-icons mt-3">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+   <div class="subfooter">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="m-0 text-white">&copy; 2024 Safalta Academy. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-light me-2">Privacy Policy&nbsp;</a><span>|</span>
+                    <a href="#" class="text-light me-2">&nbsp;Terms of Use&nbsp;</a><span>|</span>
+                    <a href="#" class="text-light">&nbsp;Accessibility</a>
+                </div>
+            </div>
+        </div>
     </div>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navbarToggler = document.querySelector('.navbar-toggler');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const closeNav = document.querySelector('.close-nav');
+        
+            navbarToggler.addEventListener('click', function() {
+                mobileNav.classList.add('show');
+            });
+        
+            closeNav.addEventListener('click', function() {
+                mobileNav.classList.remove('show');
+            });
+        
+            // Close nav when clicking outside
+            document.addEventListener('click', function(event) {
+                if (!mobileNav.contains(event.target) && !navbarToggler.contains(event.target)) {
+                    mobileNav.classList.remove('show');
+                }
+            });
+        });
+        </script>
 </body>
 </html>
